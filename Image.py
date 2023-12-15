@@ -1,0 +1,11 @@
+from PIL import Image, ImageFilter
+img=Image.open('./pikachu.jpg')
+filtered_img= img.convert('L')
+rotated_image=filtered_img.rotate(90)
+filtered_img.save("grey.png",'png')
+rotated_image.save("roated.png","png")
+resize_image=filtered_img.resize((300,300))
+resize_image.save("resized.png","png")
+box=(100,100,400,400)
+crop_image=img.crop(box)
+crop_image.save("crop.png","png")
